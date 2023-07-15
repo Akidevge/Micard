@@ -14,17 +14,35 @@ class Myapp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.lightBlueAccent,
         body: SafeArea(
-          child: Container(
-              height: 100,
-              width: 100,
-              margin: const EdgeInsets.all(20.0),
-              padding: const EdgeInsets.all(20.0),
-              color: Colors.white,
-              child: const Text(
-                'Micard',
-                textAlign: TextAlign.center,
-              )),
-        ),
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.white,
+                child: const Text(
+                  'Container 1',
+                  textAlign: TextAlign.center,
+                )),
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.orange,
+                child: const Text(
+                  'Container 2',
+                  textAlign: TextAlign.center,
+                )),
+            Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+                child: const Text(
+                  'Container 3',
+                  textAlign: TextAlign.center,
+                )),
+          ],
+        )),
       ),
     );
   }
