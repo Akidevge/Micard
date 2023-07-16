@@ -10,7 +10,7 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
@@ -18,11 +18,11 @@ class Myapp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 100.0,
                   backgroundImage: AssetImage('images/Aki.jpg'),
                 ),
-                const Text(
+                Text(
                   'Akidagoat',
                   style: TextStyle(
                     fontFamily: 'Pacifico',
@@ -31,7 +31,7 @@ class Myapp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
+                Text(
                   'FLUTTER DEVELOPER',
                   style: TextStyle(
                     fontFamily: 'SourceCodePro',
@@ -39,44 +39,38 @@ class Myapp extends StatelessWidget {
                     fontSize: 20.0,
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.bold,
-                    decoration: TextDecoration.underline,
                   ),
                 ),
-                Container(
-                  color: Colors.white,
-                  margin: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 25.0),
-                  padding: const EdgeInsets.all(10),
-                  child: const Row(
-                    children: [
-                      Icon(Icons.phone),
-                      SizedBox(
-                        width: 20.0,
+                SizedBox(
+                  height: 20,
+                  width: 200,
+                  child: Divider(
+                    color: Colors.white,
+                    thickness: 1,
+                  ),
+                ),
+                Card(
+                    color: Colors.white,
+                    margin:
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.teal,
                       ),
-                      Text('+91 88 11 22 44'),
-                      // Icon(Icons.email),
-                      // SizedBox(
-                      //   width: 20.0,
-                      // ),
-                      // Text('abc@gmail.com'),
-                    ],
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  margin: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 25.0),
-                  padding: const EdgeInsets.all(10),
-                  child: const Row(
-                    children: [
-                      Icon(Icons.email),
-                      SizedBox(
-                        width: 20.0,
+                      title: Text('+91 88 11 22 44'),
+                    )),
+                Card(
+                    color: Colors.white,
+                    margin:
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        color: Colors.teal,
                       ),
-                      Text('abc@gmail.com'),
-                    ],
-                  ),
-                ),
+                      title: Text('abc@gmail.com'),
+                    )),
               ],
             ),
           ),
