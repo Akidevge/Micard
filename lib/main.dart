@@ -10,52 +10,17 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  width: 100.0,
-                  color: Colors.red,
-                  child: const Text(
-                    'Row 1',
-                    textAlign: TextAlign.center,
-                  )),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.yellow,
-                      child: const Text(
-                        'Column 1',
-                        textAlign: TextAlign.center,
-                      )),
-                  Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.green,
-                      child: const Text(
-                        'Column 2',
-                        textAlign: TextAlign.center,
-                      )),
-                ],
-              ),
-              // const SizedBox(
-              //   width: 192.7,
-              // ),
-              Container(
-                  width: 100.0,
-                  color: Colors.teal,
-                  child: const Text(
-                    'Row 2',
-                    textAlign: TextAlign.center,
-                  )),
+              CircleAvatar(
+                radius: 100.0,
+                backgroundImage: AssetImage('Aki.jpg'),
+              )
             ],
           ),
         ),
